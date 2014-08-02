@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <title>Dor Kalev &copy; 2014</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="animate.css">
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -55,7 +56,6 @@ table {
       body {
         font-family: 'Droid Sans', sans-serif;
         background-color: rgb(245, 247, 248);
-        background-image: url('rome.jpg') 0px;
       }
 
       .avatar {
@@ -97,10 +97,34 @@ table {
         margin-top: 20px;
       }
     </style>
+    <script>
+    $(document).ready(function(){
+      $('<img/>')[0].src = 'quote.png';
+      $('.avatar').addClass('animated bounceIn');
+      $('.avatar').on('click', function(){
+        var e_ = $(this);
+        if (e_.attr('data-koko') == '1') {
+          e_.removeClass('bounceIn');
+          e_.addClass('wobble');
+          e_.attr({src:'quote.png'});
+          e_.attr('data-koko', 2)
+        } else {
+          e_.removeClass('wobble');
+          e_.addClass('bounceIn');
+          e_.attr({src:'rome.jpg'});
+          e_.attr('data-koko', 1)
+        }
+      })
+      $('h1').on('click', function() {
+        var e_ = $(this);
+        
+      })
+    })
+    </script>
 </head>
 <body>
 <div class="container">
-  <img class="avatar animated bounceIn" src="rome.jpg" onclick="this.className='avatar animated wobble'; this.src='quote.png';"></img>
+  <img class="avatar" src="rome.jpg" data-koko="1"></img>
   <h1>Dor Kalev</h1>
   <ul class="social_links">
     <li><a href="https://www.facebook.com/erlang">Facebook</a></li>
