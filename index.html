@@ -3,21 +3,59 @@
 <html lang="en">
 <head>
     <title>Dor Kalev</title>
+    <title>Dor Kalev &copy; 2014</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="animate.css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href='css/general.css' rel='stylesheet' type='text/css'>
+    <script>
+    $(document).ready(function(){
+      $('<img/>')[0].src = 'quote.png';
+      $('.avatar').addClass('animated bounceIn');
+      $('.avatar').on('click', function(){
+        var e_ = $(this);
+        if (e_.attr('data-koko') == '1') {
+          e_.removeClass('bounceIn');
+          e_.addClass('wobble');
+          e_.attr({src:'quote.png'});
+          e_.attr('data-koko', 2)
+        } else {
+          e_.removeClass('wobble');
+          e_.addClass('bounceIn');
+          e_.attr({src:'rome.jpg'});
+          e_.attr('data-koko', 1)
+        }
+      })
+      $('h1').on('click', function() {
+        var e_ = $(this);
+        
+      })
+    })
+    </script>
 </head>
 <body>
 <div class="container">
-  <img class="avatar" src="rome.jpg"></img>
+  <img class="avatar" src="rome.jpg" data-koko="1"></img>
   <h1>Dor Kalev</h1>
   <ul class="social_links">
     <li><a href="https://www.facebook.com/erlang">Facebook</a></li>
     <li><a href="https://www.linkedin.com/pub/dor-kalev/14/150/260">Linkedin</a></li>
     <li><a href="https://twitter.com/dorkalev">Twitter</a></li>
     <!-- <li><a href="https://medium.com/@dorkalev">Medium</a></li> -->
-    <li><a href="https://contextors.com">Contextors</a></li>
+    <li><a href="http://contextors.com">Contextors</a></li>
     <li class="musica"><object width="250" height="40" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsSong3446671134" name="gsSong3446671134"><param name="movie" value="http://grooveshark.com/songWidget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=34466711&style=metal&p=1" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/songWidget.swf" width="250" height="40"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&songID=34466711&style=metal&p=1" /><span><a href="http://grooveshark.com/search/song?q=Leonard%20Cohen%20Different%20Sides" title="Different Sides by Leonard Cohen on Grooveshark">Different Sides by Leonard Cohen on Grooveshark</a></span></object></object></li>
   </ul>
 </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-25028282-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
