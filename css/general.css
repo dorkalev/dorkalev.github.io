@@ -64,7 +64,12 @@ table {
         color: #222;
       }
       .player {
-        margin: 10px 10px;
+        margin-top: 20px;
+        margin-left: 25px;
+      }
+      .player audio {
+        width: 250px;
+        margin: 0 auto;
       }
       .bigi {
         position: relative;
