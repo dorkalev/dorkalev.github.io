@@ -49,14 +49,13 @@ table {
       }
 
       .avatar {
-        width: 100%;
         box-shadow: 2px 3px 5px black;
         border-radius: 8px;
+        width: 100%;
       }
       .container {
-        margin: 20px auto;
-        max-width: 700px;
-        width: 90%;
+        margin: 10px auto;
+        max-width: 300px;
       }
       h1 {
         float: left;
@@ -68,26 +67,44 @@ table {
         margin: 20px 0;
         float: right;
       }
+      .bigi {
+        position: relative;
+      }
       .social_links {
-        float: left;
+        position: absolute;
+        top: 15px;
+        right: 15px;
       }
       .social_links li {
         float:left;
         display: inline;
-        margin-right: 20px;
+        margin-left: 10px;
         line-height: 2em;
       }
       .social_links li a {
-        color: black;
-        text-decoration: none;
-        border-bottom: 5px solid #222;
+        color: darkblue;
+/*        text-decoration: none;
+        border-bottom: 1px solid darkblue;
+*/
+        /*transition: 0.3s;*/
+      }
+      .social_links li a img {
+        -webkit-filter: blur(2px);
+        /*filter: blur(120px);*/
+        width: 20px;
         transition: 0.3s;
+      }
+      .social_links li a:hover img {
+        -webkit-filter: blur(0px);
       }
       .social_links li a:hover {
-        transition: 0.3s;
-        color: #888;
-        border-bottom: 4px solid #eee;
+        /*transition: 0.3s;*/
+        /*color: #888;*/
+        /*border-bottom: 1px solid #eee;*/
       }
       .musica {
-        margin-top: 20px;
+        /*margin-top: 20px;*/
       }
+
+body {
+}
