@@ -89,12 +89,13 @@ table {
       }
       .social_links li a img {
         -webkit-filter: blur(2px);
-        /*filter: blur(120px);*/
+        filter: blur(2px);
         width: 20px;
         transition: 0.3s;
       }
       .social_links li a:hover img {
         -webkit-filter: blur(0px);
+        filter: blur(0px);
       }
       .social_links li a:hover {
         /*transition: 0.3s;*/
